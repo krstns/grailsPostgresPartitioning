@@ -25,9 +25,9 @@ CREATE INDEX idx_some_table_1_hashtime ON some_table_1 (some_date);
 CREATE OR REPLACE FUNCTION some_table_PT_func_insert_trigger()
 RETURNS TRIGGER AS $$
 BEGIN
-    IF ( NEW.some_date >= DATE '2012-02-29') THEN
+    IF ( NEW.some_date >= DATE '2012-03-01') THEN
         INSERT INTO some_table_1 VALUES (NEW.*);
-    ELSIF ( NEW.some_date < DATE '2012-02-29' ) THEN
+    ELSIF ( NEW.some_date < DATE '2012-03-01' ) THEN
         INSERT INTO some_table_2 VALUES (NEW.*);
     ELSE
         RAISE EXCEPTION 'Date out of range.  Fix the measurement_insert_trigger() function!';
