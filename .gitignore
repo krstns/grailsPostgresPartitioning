@@ -1,0 +1,13 @@
+/web-app/WEB-INF
+.classpath
+.project
+.settings
+.idea
+atlassian-ide-plugin.xml
+classes
+out
+target
+web-app/WEB-INF
+*.iml
+*.ipr
+*.iws
